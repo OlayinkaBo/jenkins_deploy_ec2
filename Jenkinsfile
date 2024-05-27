@@ -15,7 +15,7 @@ pipeline {
             }
         }
         
-         stage ('deploy to EC2') {
+         /*stage ('deploy to EC2') {
             steps {
                 script {
                     echo "deploying to shell-script to ec2"
@@ -25,7 +25,7 @@ pipeline {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} ${shellCmd}"
                     }
                 }
-            }
+            } */
         } 
     }
 }
