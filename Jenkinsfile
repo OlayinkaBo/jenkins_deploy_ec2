@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = '3.128.226.228'
+        EC2_IP = '54.164.114.229'
     }
 
     stages {
@@ -15,17 +15,17 @@ pipeline {
             }
         }
         
-         /*stage ('deploy to EC2') {
+         stage ('deploy to EC2') {
             steps {
                 script {
                     echo "deploying to shell-script to ec2"
                     def shellCmd = "bash ./websetup.sh"
-                    sshagent (['ec2-server']) {
+                    sshagent (['ec2-user']) {
                         sh "scp -o StrictHostKeyChecking=no websetup.sh ubuntu@${EC2_IP}:/home/ubuntu"
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} ${shellCmd}"
                     }
                 }
-            } */
+            } 
         } 
     }
 }
