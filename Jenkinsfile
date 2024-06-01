@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = '44.222.207.174'
+        EC2_IP = '184.72.142.212'
     }
 
     stages {
@@ -14,7 +14,7 @@ pipeline {
                 }
             }
         }
-        
+        /*
          stage ('deploy to EC2') {
             steps {
                 script {
@@ -25,7 +25,7 @@ pipeline {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@${EC2_IP} ${shellCmd}"
                     }
                 }
-            } 
+            } */
         } 
     }
 }
