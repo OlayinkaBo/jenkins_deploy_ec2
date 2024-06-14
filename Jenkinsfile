@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = '54.145.228.52'
+        EC2_IP = '18.234.46.41'
     }
 
     stages {
