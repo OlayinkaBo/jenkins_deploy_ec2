@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-/*    environment {
+    environment {
         EC2_IP = '54.164.204.152'
-    } */
+    }
 
     stages {
         stage ('fetch code') {
